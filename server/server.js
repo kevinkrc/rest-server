@@ -12,7 +12,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(require('./routes/routes'));
+
+// Configuracion global de rutas
+app.use(require('./routes/index'));
  
 
    

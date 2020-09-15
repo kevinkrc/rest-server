@@ -42,7 +42,7 @@ let usuarioSchema = new Schema({
     }
 });
 
-usuarioSchema.methods.toJSON = function () {
+usuarioSchema.methods.toJSON = function () {//  Se elimina informacion (password) para que esta no sea mostrada al usuario
   let user = this;
   let userObject = user.toObject();
   delete userObject.password;
